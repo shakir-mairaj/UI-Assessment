@@ -34,7 +34,6 @@ search_button.click()
 
 driver.implicitly_wait(5)
 
-product_asin = []
 product_name = []
 product_price = []
 product_ratings = []
@@ -47,10 +46,6 @@ for item in items:
     # find name
     name = item.find_element(By.XPATH, './/span[@class="a-size-medium a-color-base a-text-normal"]')
     product_name.append(name.text)
-
-    # find ASIN number
-    data_asin = item.get_attribute("data-asin")
-    product_asin.append(data_asin)
 
     # find price
     whole_price = item.find_elements(By.XPATH, './/span[@class="a-price-whole"]')
@@ -83,7 +78,6 @@ driver.quit()
 
 # to print results
 print(product_name)
-print(product_asin)
 print(product_price)
 print(product_ratings)
 print(product_ratings_num)
