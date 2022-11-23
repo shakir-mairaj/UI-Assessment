@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.support import expected_conditions as EC
 
-web = 'driver.get("https://google.co.in / search?q ="+keyword)'
+web = 'driver.get("https://google.co.in / search?q ="+amazon)'
 driver_path = 'D:/chromedriver'
 
 options = webdriver.ChromeOptions()
